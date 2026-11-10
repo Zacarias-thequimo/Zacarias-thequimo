@@ -1,74 +1,100 @@
 # Zacarias Thequimo
 
-Offensive Security Researcher and Penetration Tester based in Mozambique. I break things to help make them secure.
+Software developer in Mozambique, and founder of TechMz Solutions.
 
-I specialize in web application security, reconnaissance automation, and vulnerability research. My work focuses on identifying critical flaws in production systems -- from API misconfigurations and authentication bypasses to infrastructure-level exposures like WAF bypasses and origin IP leaks.
+[Email](mailto:zacariasrichard85@gmail.com)
 
----
+## What I work on
 
-## Skills
+I build developer tools that run in the terminal or on the desktop and can be installed the
+same day: a single binary, a `.deb`, no ten-step setup first.
 
-**Offensive Security**
+Web products with a database, authentication, queues, local payment and WhatsApp delivery.
+Some of that ships through TechMz Solutions, the agency I founded, which also does IT
+consulting, cloud work and application security for local clients.
 
-- Web Application Penetration Testing (OWASP Top 10)
-- API Security Testing (REST, GraphQL, WebSocket)
-- Network Reconnaissance and Port Scanning
-- SQL Injection (Boolean Blind, Time-Based, Union-Based)
-- XSS (Reflected, Stored, DOM-Based)
-- CRLF Injection, Clickjacking, CORS Misconfiguration
-- Cloudflare/WAF Bypass Techniques
-- DNS, SPF, DKIM, DMARC Auditing
-- WordPress Security Assessment
+Application security work: reconnaissance, traffic interception, and reviews of exposed
+surfaces. Authorised testing and CTF.
 
-**Development**
+Native Linux and ARM clients where Electron is not worth the weight, packaged for amd64
+and arm64.
 
-- Python (httpx, asyncio, dns.resolver, automation scripts)
-- Go (networking tools, CLI applications)
-- JavaScript / Node.js (Express, Baileys, automation)
-- Bash scripting for recon pipelines
-- Git, Linux server administration
+I read a system's traffic before I write anything against it. Writing a proxy to see that
+traffic and a toolkit to map an exposed surface teaches more about how a system works than
+its documentation does. I also build for the constraints here: low bandwidth, little RAM, a
+phone as the only computer, and mobile money as the only payment rail.
 
-**Tools**
+## Selected work
 
-- Burp Suite, Nmap, ffuf, sqlmap, Nikto
-- Custom tooling (James Recon Toolkit)
-- Nuclei, Subfinder, httpx, curl
-- Wireshark, tcpdump
+### Tools
 
----
+[**BurpHub**](https://github.com/Zacarias-thequimo/burphub) (Go, Wails, SQLite)
+HTTP and HTTPS proxy for the laptop, with a terminal UI and a native Ubuntu app on WebKitGTK
+and no bundled Chromium. Interception with live editing, repeater, SQLite history, API test
+collections, a decoder, a passive scanner, and its own CA with per-browser install notes.
+Ships as a `.deb`.
 
-## Projects
+[**zacs**](https://github.com/Zacarias-thequimo/zacs) (Rust)
+Drop-in npm replacement: npm-compatible, workspace-ready, single binary.
 
-### [James Recon](https://github.com/Zacarias-thequimo/james-recon)
-Modular reconnaissance and penetration testing toolkit written in Python. 13 async modules covering subdomain enumeration, port scanning, OSINT, technology detection, SQL injection testing, and automated reporting. Built for CTF competitions and authorized security assessments.
+[**FlowTools**](https://github.com/Zacarias-thequimo/flowtools) (Rust, Kotlin, Axum, Jetpack Compose)
+Controls a PC from the phone without taking over the screen. A session server, a PC client
+and an Android app share a state contract mirrored in Rust and Kotlin. Every tag produces
+signed releases from CI.
 
-### [BurpHub](https://github.com/Zacarias-thequimo/burphub)
-HTTP/HTTPS proxy and network analysis CLI built in Go with an interactive TUI. Intercept, inspect, and manipulate web traffic from the terminal.
+[**Wireframe Local**](https://github.com/Zacarias-thequimo/wireframe-local) (TypeScript)
+Wireframe editor that runs in the browser with no backend, account or database. Exports PNG,
+SVG, JSON, plain HTML/CSS and HTML with Tailwind.
 
-### [Skills OpenClaw](https://github.com/Zacarias-thequimo/skills-openclaw)
-Custom OpenClaw skills for web search (DuckDuckGo) and email (Gmail IMAP/SMTP). Zero API keys required.
+[**james-recon**](https://github.com/Zacarias-thequimo/james-recon) (Python, httpx, asyncio)
+Thirteen async modules for reconnaissance and exploitation: enumeration, port scan, OSINT,
+TLS analysis, SQL injection detection by boolean blind and by response time, and a JSON or
+Markdown report. MIT, for CTF and authorised tests.
 
----
+### Products
 
-## Approach
+**TicketOn** (TypeScript, Next.js, Fastify, Prisma, BullMQ, private)
+Ticketing for events in Mozambique: local payment, delivery by WhatsApp or email, entry
+validated by QR code or a six-digit code.
 
-I conduct full-scope security assessments on web platforms, starting from passive reconnaissance through active exploitation and detailed reporting. Every engagement produces a comprehensive report with severity-rated findings, reproducible proof-of-concept commands (curl, sqlmap, etc.), and prioritized remediation guidance.
+**ScrapSend** (Python, Next.js, Evolution API, private)
+Finds businesses without a website on Google Maps, qualifies them, and messages them on
+WhatsApp with a demo site ready to send. Runs in production and resumes from saved state
+when a batch is interrupted.
 
-Targets I have assessed include fintech platforms, e-commerce systems, payment gateways, SaaS applications, and government-adjacent services across Mozambique.
+[**YT-Down API**](https://github.com/Zacarias-thequimo/yt-down-api) (Python, FastAPI, SQLAlchemy)
+Video, audio and playlist downloads behind JWT auth, with several API keys per account.
 
----
+**Dispara SMS** (Kotlin, Jetpack Compose, private)
+Bulk SMS from the phone itself, on the carrier plan, built for low-RAM handsets on slow
+networks.
 
-## GitHub Stats
+### Extensions and integrations
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Zacarias-thequimo&show_icons=true&theme=dark&hide_border=true&count_private=true)
+[**skills-openclaw**](https://github.com/Zacarias-thequimo/skills-openclaw) (Python)
+OpenClaw skills for DuckDuckGo search and IMAP/SMTP email, with no API keys.
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Zacarias-thequimo&layout=compact&theme=dark&hide_border=true)
+[**nanomuse-slim**](https://github.com/Zacarias-thequimo/nanomuse-slim) (Swift, Tauri)
+Slimmed packaging for a desktop agent, including a low-memory profile for 2 CPU / 4 GB
+machines.
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Zacarias-thequimo&theme=dark&hide_border=true)
+## How I work
 
----
+I start by intercepting: real headers and responses, not what the documentation promises.
+Then I take the format apart, whether that is an unnamed blob, a protocol with no spec, or a
+file nobody wrote down. The tool comes after, in whichever language fits the problem: Go
+for network code, Rust for binaries, Python for automation, TypeScript for product. I ship
+it as something that installs in one step, with the docs in Portuguese where the audience
+is local.
+
+## Stack
+
+Go, Rust, TypeScript, Python, Kotlin, Swift, GDScript
+Postgres, Redis, Prisma, Cloudflare R2, Docker, Linux, GitHub Actions
+Astro, Next.js, Svelte, GSAP, Tailwind
+Traffic interception, reconnaissance and enumeration, headers/TLS/CORS, injection detection
 
 ## Contact
 
-- Email: zacariasrichard85@gmail.com
+- Email: [zacariasrichard85@gmail.com](mailto:zacariasrichard85@gmail.com)
 - GitHub: [Zacarias-thequimo](https://github.com/Zacarias-thequimo)
